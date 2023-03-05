@@ -27,6 +27,7 @@ app.use(
   })
 );
 
+
 // Connect to database
 connectToDB();
 
