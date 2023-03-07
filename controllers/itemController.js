@@ -85,7 +85,7 @@ const deleteItem = async (req, res) => {
     await Item.deleteOne({ _id: itemId, user: req.user._id });
 
     // Respond
-    res.json({ success: 'Item deleted ' });
+    res.json({ success: 'Item deleted' });
   } catch (err) {
     console.log(err);
     res.sendStatus(400);
