@@ -34,13 +34,13 @@ connectToDB();
 app.post('/signup', usersController.signup);
 app.post('/login', usersController.login);
 app.get('/logout', usersController.logout);
-app.get('/check-auth', requireAuth, usersController.checkAuth);
+app.get('/check-auth', usersController.checkAuth);
 
-app.get('/items', requireAuth, itemsController.fetchItems);
-app.get('/items/:id', requireAuth, itemsController.fetchItem);
-app.post('/items', requireAuth, itemsController.createItem);
-app.put('/items/:id', requireAuth, itemsController.updateItem);
-app.delete('/items/:id', requireAuth, itemsController.deleteItem);
+app.get('/items', itemsController.fetchItems);
+app.get('/items/:id', itemsController.fetchItem);
+app.post('/items', itemsController.createItem);
+app.put('/items/:id', itemsController.updateItem);
+app.delete('/items/:id', itemsController.deleteItem);
 
 // Start our server
 app.listen(PORT, () => {
