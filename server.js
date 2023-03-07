@@ -14,7 +14,7 @@ const requireAuth = require('./middleware/requireAuth');
 
 // Create an express app
 const app = express();
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 3000;
 
 // Configure express app
 app.use(express.json());
@@ -26,7 +26,6 @@ app.use(
     credentials: true,
   })
 );
-
 
 // Connect to database
 connectToDB();
