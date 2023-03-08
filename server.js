@@ -19,6 +19,7 @@ const PORT = process.env.PORT || 3000;
 // Configure express app
 app.use(express.json());
 app.use(cookieParser());
+
 // Server accepts from any domain
 app.use(
   cors({
