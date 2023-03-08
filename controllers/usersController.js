@@ -50,7 +50,7 @@ async function login(req, res) {
     res.sendStatus(200);
   } catch (err) {
     console.log(err);
-    res.sendStatus(400, 'okiii');
+    res.sendStatus(400, 'okii');
   }
 }
 
