@@ -27,7 +27,7 @@ async function login(req, res) {
 
     // Find user with req email
     const user = await User.findOne({ email });
-    if (!user) return sendStatus(401);
+    if (!user) return res.sendStatus(401);
 
     // Compare  sent in password with found user password hash
     const passwordMatch = bcrypt.compareSync(password, user.password);
@@ -70,7 +70,7 @@ function checkAuth(req, res) {
     res.sendStatus(200);
   } catch (err) {
     console.log(err);
-    res.sendStatus(400, 'hellu');
+    res.sendStatus(400);
   }
 }
 

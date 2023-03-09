@@ -14,12 +14,11 @@ const requireAuth = require('./middleware/requireAuth');
 
 // Create an express app
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 
 // Configure express app
 app.use(express.json());
 app.use(cookieParser());
-
 // Server accepts from any domain
 app.use(
   cors({
@@ -45,5 +44,5 @@ app.delete('/items/:id', requireAuth, itemsController.deleteItem);
 
 // Start our server
 app.listen(PORT, () => {
-  console.log(`Server started on port  ${PORT}`);
+  console.log(`Server started on port ${PORT}`);
 });
