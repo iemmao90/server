@@ -29,6 +29,7 @@ app.use(
 
 // Connect to database
 connectToDB();
+console.log('test');
 
 // Routing
 app.post('/signup', usersController.signup);
