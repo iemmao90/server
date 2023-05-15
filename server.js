@@ -14,7 +14,8 @@ const requireAuth = require('./middleware/requireAuth');
 
 // Create an express app
 const app = express();
-const PORT = process.env.PORT || 3030;
+// const PORT = process.env.PORT || 3030;
+const PORT = 3030;
 
 // Configure express app
 app.use(express.json());
