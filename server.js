@@ -29,7 +29,6 @@ app.use(
 
 // Connect to database
 connectToDB();
-console.log('hej');
 
 // Routing
 app.post('/signup', usersController.signup);
