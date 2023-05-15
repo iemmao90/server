@@ -1,7 +1,9 @@
 // Load env variables
 if (process.env.NODE_ENV != 'production') {
+  console.log(process.env.NODE_ENV);
   require('dotenv').config();
 }
+
 // Import dependencies
 const express = require('express');
 const cors = require('cors');
@@ -14,8 +16,7 @@ const requireAuth = require('./middleware/requireAuth');
 
 // Create an express app
 const app = express();
-// const PORT = process.env.PORT || 3030;
-const PORT = 3030;
+const PORT = process.env.PORT || 3030;
 
 // Configure express app
 app.use(express.json());
@@ -30,7 +31,6 @@ app.use(
 
 // Connect to database
 connectToDB();
-console.log('test');
 
 // Routing
 app.post('/signup', usersController.signup);

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 async function connectToDB() {
   try {
-    await mongoose.connect(process.env.DB_URI, {
+    await mongoose.connect(process.env.REACT_APP_DB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
@@ -13,5 +13,3 @@ async function connectToDB() {
 }
 
 module.exports = connectToDB;
-
-

@@ -35,7 +35,7 @@ async function login(req, res) {
     // Create a JWT token
     // Lasting for 30 days
     const exp = Date.now() + 1000 * 60 * 60 * 24 * 30;
-    const token = jwt.sign({ sub: user._id, exp }, process.env.SECRET);
+    const token = jwt.sign({ sub: user._id, exp }, process.env.REACT_APP_SECRET);
 
     // Set the cookie
     res.cookie('Authorization', token, {

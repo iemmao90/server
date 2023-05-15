@@ -6,7 +6,7 @@ async function requireAuth(req, res, next) {
   const token = req.cookies.Authorization;
   try {
     // Decode the token
-    const decoded = jwt.verify(token, process.env.SECRET);
+    const decoded = jwt.verify(token, process.env.REACT_APP_SECRET);
 
     // Check expiration
 
