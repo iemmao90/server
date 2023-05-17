@@ -6,6 +6,7 @@ async function connectToDB() {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
+    console.log(typeof process.env.REACT_APP_DB_URI);
     console.log('Connected to database');
   } catch (err) {
     console.log(err);
